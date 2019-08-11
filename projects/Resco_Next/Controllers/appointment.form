@@ -1,65 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?>
-<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2">
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
   <IsContactForm>false</IsContactForm>
   <EntityName>appointment</EntityName>
   <CamelCase>Appointment</CamelCase>
-  <ClassBinding />
-  <SerializedChildren />
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
   <SerializedChildrenV2>
     <FormTab xsi:type="DetailTab">
       <Name>General</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="regardingobjectid">
-          <IsConstant>false</IsConstant>
+        <DetailItem SchemaName="regardingobjectid"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem xsi:type="SeparatorDetailItem">
-          <IsConstant>false</IsConstant>
+        <DetailItem SchemaName="subject"/>
+        <DetailItem SchemaName="location"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="subject">
-          <IsConstant>false</IsConstant>
+        <DetailItem SchemaName="scheduledstart"/>
+        <DetailItem SchemaName="scheduledend"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="location">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem xsi:type="SeparatorDetailItem">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="scheduledstart">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="scheduledend">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem xsi:type="SeparatorDetailItem">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="prioritycode">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="statuscode">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
+        <DetailItem SchemaName="prioritycode"/>
+        <DetailItem SchemaName="statuscode"/>
       </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="IFrameTab">
+      <Name>Web</Name>
+      <Url></Url>
     </FormTab>
     <FormTab xsi:type="DetailTab">
       <Name>Details</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="organizer">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="requiredattendees">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
+        <DetailItem SchemaName="organizer"/>
+        <DetailItem SchemaName="requiredattendees"/>
       </SerializedChildren>
     </FormTab>
+    <FormTab xsi:type="AssociatedTab">
+      <Name>Notas List</Name>
+      <Binding SchemaName="annotation.objectid"/>
+    </FormTab>
   </SerializedChildrenV2>
-  <Navigation>
-    <Name>Navigation</Name>
-    <SerializedChildren>
-      <DetailItem SchemaName="annotation.objectid">
-        <IsConstant>false</IsConstant>
-      </DetailItem>
-    </SerializedChildren>
-  </Navigation>
-  <SerializedContactInfo />
 </EntityForm>
