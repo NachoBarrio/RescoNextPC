@@ -2,7 +2,9 @@
   <IsContactForm>false</IsContactForm>
   <EntityName>appointment</EntityName>
   <CamelCase>Appointment</CamelCase>
-  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <PrimaryCommands>custom_LanzarFlow|Revisado|</PrimaryCommands>
+  <SharedVariableNames/>
   <ClassBinding/>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
   <SerializedChildrenV2>
@@ -25,6 +27,9 @@
         </DetailItem>
         <DetailItem SchemaName="prioritycode"/>
         <DetailItem SchemaName="statuscode"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
       </SerializedChildren>
     </FormTab>
     <FormTab xsi:type="IFrameTab">
