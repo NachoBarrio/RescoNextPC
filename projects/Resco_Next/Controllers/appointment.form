@@ -33,8 +33,8 @@
       </SerializedChildren>
     </FormTab>
     <FormTab xsi:type="IFrameTab">
-      <Name>Web</Name>
-      <Url></Url>
+      <Name>LanzarFlow</Name>
+      <Url>file://Forms/Cita/FormToFlow.html</Url>
     </FormTab>
     <FormTab xsi:type="DetailTab">
       <Name>Details</Name>
