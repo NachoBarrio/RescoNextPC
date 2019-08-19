@@ -1,1 +1,1 @@
-﻿@Dashboard,@activity,@Tourplan,contact,@CallImport,@Setup,@About,appointment
+﻿@Dashboard,@activity,@Tourplan,contact,@CallImport,@Setup,@About,appointment,@@PowerBi;file://Forms/PowerBi/PowerBiEmbebido.html

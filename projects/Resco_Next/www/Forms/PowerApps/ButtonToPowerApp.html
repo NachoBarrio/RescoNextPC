@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Empty Offline HTML page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1, user-scalable=no" />
+    <script src="../../Libraries/JSBridge.js"></script>
+    <script type="text/javascript" src="../../Libraries/jquery-3.4.1-min.js"></script>
+    <script type="text/javascript">
+        var wait = null;
+        function onLoad() {
+
+            var functionName = "FnLoad";
+
+            try {
+
+                MobileCRM.UI.EntityForm.onCommand("custom_lanzarPApp",
+
+                    function (entityForm) {
+
+                        if (entityForm)
+                            //MobileCRM.Platform.openUrl("https://web.powerapps.com/webplayer/iframeapp?source=iframe&appId=/providers/Microsoft.PowerApps/apps/067f0c35-f228-40b7-a4d5-c581fe19ed89");
+                            window.open("https://web.powerapps.com/webplayer/iframeapp?source=iframe&appId=/providers/Microsoft.PowerApps/apps/067f0c35-f228-40b7-a4d5-c581fe19ed89","_blank");
+                            
+
+                    }
+
+                );
+
+            }
+
+            catch (e) {
+
+                throw new MobileCrmException(functionName + e.message);
+
+            }
+
+        }
+    </script>
+</head>
+<body onload="onLoad()">
+
+</body>
+</html>

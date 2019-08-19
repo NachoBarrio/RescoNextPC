@@ -1,85 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?>
-<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2">
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
   <IsContactForm>false</IsContactForm>
   <EntityName>contact</EntityName>
   <CamelCase>Contact</CamelCase>
-  <SerializedChildren />
+  <PrimaryCommands>Scan|||custom_lanzarPApp|PPolla|</PrimaryCommands>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
   <SerializedChildrenV2>
     <FormTab xsi:type="DetailTab">
       <Name>General</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="parentcustomerid">
-          <IsConstant>false</IsConstant>
+        <DetailItem SchemaName="parentcustomerid"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem xsi:type="SeparatorDetailItem">
-          <IsConstant>false</IsConstant>
+        <DetailItem SchemaName="lastname"/>
+        <DetailItem SchemaName="firstname"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="lastname">
-          <IsConstant>false</IsConstant>
+        <DetailItem SchemaName="mobilephone"/>
+        <DetailItem SchemaName="telephone1"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="firstname">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem xsi:type="SeparatorDetailItem">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="mobilephone">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="telephone1">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem xsi:type="SeparatorDetailItem">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="emailaddress1">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="fax">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
+        <DetailItem SchemaName="emailaddress1"/>
+        <DetailItem SchemaName="fax"/>
       </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="IFrameTab">
+      <Name>PApp Embebida</Name>
+      <Url>file://Forms/PowerApps/PAppEmbebida.html</Url>
+    </FormTab>
+    <FormTab xsi:type="IFrameTab">
+      <Name>Lanzar PWapp</Name>
+      <Url>file://Forms/PowerApps/ButtonToPowerApp.html</Url>
     </FormTab>
     <FormTab xsi:type="DetailTab">
       <Name>Address</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="address1_line1">
-          <IsConstant>false</IsConstant>
+        <DetailItem SchemaName="address1_line1"/>
+        <DetailItem SchemaName="address1_line2"/>
+        <DetailItem SchemaName="address1_line3"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="address1_line2">
-          <IsConstant>false</IsConstant>
+        <DetailItem SchemaName="address1_city"/>
+        <DetailItem SchemaName="address1_postalcode"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="address1_line3">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem xsi:type="SeparatorDetailItem">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="address1_city">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="address1_postalcode">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem xsi:type="SeparatorDetailItem">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="address1_stateorprovince">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="address1_country">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
+        <DetailItem SchemaName="address1_stateorprovince"/>
+        <DetailItem SchemaName="address1_country"/>
       </SerializedChildren>
     </FormTab>
+    <FormTab xsi:type="AssociatedTab">
+      <Name>Notas List</Name>
+      <Binding SchemaName="annotation.objectid"/>
+    </FormTab>
   </SerializedChildrenV2>
-  <Navigation>
-    <Name>Navigation</Name>
-    <SerializedChildren>
-      <DetailItem SchemaName="annotation.objectid">
-        <IsConstant>false</IsConstant>
-      </DetailItem>
-    </SerializedChildren>
-  </Navigation>
-  <SerializedContactInfo />
 </EntityForm>
