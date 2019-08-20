@@ -2,7 +2,7 @@
   <IsContactForm>false</IsContactForm>
   <EntityName>contact</EntityName>
   <CamelCase>Contact</CamelCase>
-  <PrimaryCommands>Scan|||custom_lanzarPApp|PPolla|</PrimaryCommands>
+  <PrimaryCommands>Scan|||custom_lanzarPApp|PApp|</PrimaryCommands>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
   <SerializedChildrenV2>
     <FormTab xsi:type="DetailTab">
