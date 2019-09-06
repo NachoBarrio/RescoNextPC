@@ -1,15 +1,15 @@
-﻿<EntityList UseSyncFilter="true">
+﻿<EntityList>
   <Attributes>
     <EntityName>resco_questionnaire</EntityName>
     <CamelCase>resco_questionnaire</CamelCase>
     <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
-    <ClassBinding />
+    <ClassBinding/>
   </Attributes>
-  <Name>Templates</Name>
+  <Name>In progress or completed</Name>
   <Kind>List</Kind>
-  <IsDefault>true</IsDefault>
   <AutoWideWidth>0</AutoWideWidth>
-  <OrderBy>modifiedon</OrderBy>
+  <OrderBy>!createdon</OrderBy>
+  <MultiSelectCommands>RunMobileReport||</MultiSelectCommands>
   <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <SerializedBindings>
     <string>createdon</string>
@@ -27,11 +27,11 @@
     <string>resco_templateid</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
-  <TemplateSelectorRule>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;definition e="false"&gt;&lt;var&gt;TemplateName&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;arg&gt;var:Entity.resco_name&lt;/arg&gt;&lt;/definition&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;TemplateName&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:Template Fixing Control Panel&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:2&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;TemplateName&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:Template Regular Inspection&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:1&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <TemplateSelectorRule>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;definition e="false"&gt;&lt;var&gt;TemplateName&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;arg&gt;var:Entity.resco_templateid&lt;/arg&gt;&lt;/definition&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;TemplateName&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:Template Fixing Control Panel&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:2&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;TemplateName&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:Template Regular Inspection&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:1&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
   <Fetch version="1.0">
     <entity name="resco_questionnaire">
       <filter type="and">
-        <condition value="1" attribute="resco_istemplate" operator="eq" />
+        <condition attribute="resco_istemplate" operator="eq" value="0"/>
       </filter>
     </entity>
   </Fetch>
@@ -41,17 +41,17 @@
       <DesignHeight>48</DesignHeight>
       <Name>Default</Name>
       <Width>320</Width>
-      <Height>90</Height>
+      <Height>110</Height>
       <SerializedChildren>
         <CellTemplate SchemaName="resco_name">
           <StyleName>0102 h2</StyleName>
-          <Bounds>75,15,240,21</Bounds>
+          <Bounds>75,38,225,22</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="resco_description">
           <StyleName>0103 p grey</StyleName>
-          <Bounds>75,39,240,39</Bounds>
+          <Bounds>75,64,225,36</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -62,6 +62,18 @@
           <CellKind>1</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
+        <CellTemplate SchemaName="createdon">
+          <StyleName>0110 date</StyleName>
+          <Bounds>75,15,128,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="createdon">
+          <StyleName>0111 time right</StyleName>
+          <Bounds>210,15,90,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
     <RowTemplate>
@@ -69,17 +81,23 @@
       <DesignHeight>48</DesignHeight>
       <Name>RegularInspection</Name>
       <Width>320</Width>
-      <Height>90</Height>
+      <Height>110</Height>
       <SerializedChildren>
         <CellTemplate SchemaName="resco_name">
           <StyleName>0102 h2</StyleName>
-          <Bounds>75,15,235,21</Bounds>
+          <Bounds>75,38,225,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="createdon">
+          <StyleName>0110 date</StyleName>
+          <Bounds>75,15,130,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="resco_description">
           <StyleName>0103 p grey</StyleName>
-          <Bounds>75,39,235,39</Bounds>
+          <Bounds>75,62,225,36</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -90,6 +108,12 @@
           <CellKind>1</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
+        <CellTemplate SchemaName="createdon">
+          <StyleName>0111 time right</StyleName>
+          <Bounds>210,15,90,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
     <RowTemplate>
@@ -97,17 +121,23 @@
       <DesignHeight>48</DesignHeight>
       <Name>Repair</Name>
       <Width>320</Width>
-      <Height>90</Height>
+      <Height>110</Height>
       <SerializedChildren>
-        <CellTemplate SchemaName="TemplateName">
+        <CellTemplate SchemaName="resco_name">
           <StyleName>0102 h2</StyleName>
-          <Bounds>75,15,235,21</Bounds>
+          <Bounds>75,38,225,21</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
+        <CellTemplate SchemaName="createdon">
+          <StyleName>0111 time right</StyleName>
+          <Bounds>200,15,100,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
         <CellTemplate SchemaName="resco_description">
           <StyleName>0103 p grey</StyleName>
-          <Bounds>75,39,235,39</Bounds>
+          <Bounds>75,62,225,36</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -118,10 +148,16 @@
           <CellKind>1</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
+        <CellTemplate SchemaName="createdon">
+          <StyleName>0110 date</StyleName>
+          <Bounds>75,15,120,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
   </SerializedTemplates>
   <CustomProperties>
-    <SerializedClassBinding type="String" name="TemplateName" label="TemplateName" />
+    <SerializedClassBinding name="TemplateName" label="TemplateName" type="String"/>
   </CustomProperties>
 </EntityList>

@@ -19,7 +19,7 @@
                 MobileCRM.UI.EntityForm.onCommand("custom_LanzarFlow",
 
                     function (entityForm) {
-                       
+
                         if (entityForm)
 
                             getPhoto();
@@ -38,12 +38,45 @@
 
         }
 
+        function takePhoto() {
+            var service = new MobileCRM.Services.DocumentService();
+
+            service.capturePhoto(
+                function (fileInfo) {
+                    MobileCRM.bridge.alert("File pasted: " + fileInfo.filePath + '\n' + fileInfo.url);
+                    /// <param name='fileInfo' type='MobileCRM.Services.FileInfo '/>
+                    MobileCRM.Application.fileExists(fileInfo.filePath, function (exists) {
+                        if (exists) {
+                            wait = MobileCRM.UI.EntityForm.showPleaseWait("Espere mientras se ejecuta el FLOW");
+                            MobileCRM.Application.readFileAsBase64(fileInfo.filePath, function (data) {
+                                var myJSObject = {
+                                    "file": {
+                                        "filename": "Desde Resco",
+                                        "contentBytes": data
+                                    }
+                                };
+                                callFlow(myJSObject);
+
+                            }, MobileCRM.bridge.alert);
+                        }
+                        else
+                            MobileCRM.bridge.alert("File '" + imagePath + "' doesnt'exist");
+                    });
+                },
+                function (error) {
+                    MobileCRM.bridge.alert("An error has occurred");
+                }
+            );
+        
+        }
+
         function getPhoto() {
             var service = new MobileCRM.Services.DocumentService();
             service.selectFile(
                 function (fileInfo) {
-                    
+
                     /// <param name='fileInfo' type='MobileCRM.Services.FileInfo '/>
+                    MobileCRM.bridge.alert("File pasted: " + fileInfo.filePath + '\n' + fileInfo.url);
                     //document.getElementById("imgElement").src = fileInfo.url;
                     MobileCRM.Application.fileExists(fileInfo.filePath, function (exists) {
                         if (exists) {
@@ -60,10 +93,12 @@
                             }, MobileCRM.bridge.alert);
                         }
                         else
-                            MobileCRM.bridge.alert("File '" + fileInfo.filePath + "' doesnt'exist");
+                            MobileCRM.bridge.alert("File '" + imagePath + "' doesnt'exist");
                     });
+                },
+                function (error) {
+                    MobileCRM.bridge.alert("An error has occurred");
                 }
-        
             );
         }
 

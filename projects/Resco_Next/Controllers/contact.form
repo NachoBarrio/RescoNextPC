@@ -28,7 +28,7 @@
     </FormTab>
     <FormTab xsi:type="IFrameTab">
       <Name>PApp Embebida</Name>
-      <Url>file://Forms/PowerApps/PAppEmbebida.html</Url>
+      <Url>file://Forms/PowerApps/PAppEmbebida.html{userlogin}</Url>
     </FormTab>
     <FormTab xsi:type="IFrameTab">
       <Name>Lanzar PWapp</Name>
