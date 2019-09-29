@@ -1,1 +1,1 @@
-﻿@Dashboard,@activity,@Tourplan,contact,@CallImport,@Setup,@About,appointment,@@PowerBi;file://Forms/PowerBi/PowerBiEmbebido.html,#Power Consultant,##
+﻿@Dashboard,@activity,@Tourplan,contact,@CallImport,@Setup,@About,appointment,@@PowerBi;file://Forms/PowerBi/PowerBiEmbebido.html,#Power Consultant,##,@@Guides;file://Forms/PowerApps/Emb2
